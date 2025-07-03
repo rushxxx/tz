@@ -1,0 +1,116 @@
+.container {
+  max-width: 500px;
+  margin: 48px auto;
+  padding: 28px 24px 24px 24px;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.08), 0 1.5px 4px 0 rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 8px;
+}
+.row {
+  margin-bottom: 8px;
+  font-size: 1.08rem;
+  color: #333;
+}
+.label {
+  font-weight: 500;
+  color: #555;
+  margin-right: 6px;
+}
+.date {
+  color: #888;
+  font-size: 0.98rem;
+}
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+.btn {
+  padding: 8px 18px;
+  border: none;
+  border-radius: 7px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 rgba(100,108,255,0.08);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.btn.delete {
+  background: linear-gradient(90deg, #e03131 0%, #ff6b6b 100%);
+  color: #fff;
+}
+.btn.delete:hover {
+  background: linear-gradient(90deg, #ff6b6b 0%, #e03131 100%);
+}
+.btn.edit {
+  background: linear-gradient(90deg, #646cff 0%, #3b3bff 100%);
+  color: #fff;
+}
+.btn.edit:hover {
+  background: linear-gradient(90deg, #3b3bff 0%, #646cff 100%);
+}
+.modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(40, 40, 60, 0.18);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modalContent {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px 0 rgba(100,108,255,0.13);
+  padding: 28px 24px 20px 24px;
+  min-width: 320px;
+  max-width: 98vw;
+  min-height: 120px;
+  max-height: 90vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.modalTitle {
+  font-size: 1.18rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #222;
+}
+.modalClose {
+  align-self: flex-end;
+  margin-top: -18px;
+  margin-bottom: 2px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.18s;
+}
+.modalClose:hover {
+  color: #e03131;
+}
+@media (max-width: 700px) {
+  .container {
+    max-width: 98vw;
+    padding: 14px 4vw 16px 4vw;
+  }
+  .title {
+    font-size: 1.15rem;
+  }
+  .modalContent {
+    padding: 14px 4vw 16px 4vw;
+    min-width: 0;
+  }
+} 
